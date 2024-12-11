@@ -36,3 +36,38 @@ Location: diagrams/UseCaseDiagram.puml
 To render the diagram:
 Use a PlantUML-supported tool (e.g., IntelliJ, Visual Studio Code, or PlantUML Online).
 Execute the .puml file to generate the diagram.
+
+### 2.Class Diagram
+The Class Diagram represents the static structure of the Bank Account Management System. It defines the classes in the system, their attributes, methods, and the relationships between them.
+
+#### Key Classes:
+
+**Bank:** Manages all accounts in the system. Provides methods to create accounts and retrieve account details.
+
+**Account:** Serves as the base class for all account types. Defines common attributes like accountNumber, accountHolderName, and balance. Includes methods for deposit, withdrawal, and viewing balance.
+
+**SavingsAccount:** A specialized account that inherits from Account. Includes additional attributes such as interestRate and methods like calculateInterest().
+
+**CurrentAccount:** A specialized account that inherits from Account. Includes additional attributes such as overdraftLimit and methods like applyOverdraft(). 
+
+#### Relationships:
+
+Bank ↔ Account: Type: Association (one-to-many).
+Explanation: A Bank manages multiple Account objects.
+
+Account ↔ SavingsAccount/CurrentAccount: Type: Inheritance (generalization).
+Explanation: SavingsAccount and CurrentAccount inherit from the base Account class.
+
+#### Diagram Files
+The Use Case Diagram was created using Draw.io (diagrams.net).
+File Name: BAM_ClassDiagram.drawio.png
+Location: diagrams/BAM_ClassDiagram.drawio.png
+
+
+PlantUML Code:
+The Use Case Diagram can also be generated using PlantUML.
+File Name: BAM_ClassDiagram.puml
+Location: diagrams/BAM_ClassDiagram.puml
+To render the diagram:
+Use a PlantUML-supported tool (e.g., IntelliJ, Visual Studio Code, or PlantUML Online).
+Execute the .puml file to generate the diagram.
