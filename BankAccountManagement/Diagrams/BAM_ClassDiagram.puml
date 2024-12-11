@@ -1,0 +1,32 @@
+@startuml
+' Define classes
+class Bank {
+    - accounts: Map<Integer, Account>
+    + createAccount(accountHolderName: String, accountType: String): void
+    + getAccount(accountNumber: Integer): Account
+}
+
+class Account {
+    - accountNumber: Integer
+    - accountHolderName: String
+    - balance: Double
+    + deposit(amount: Double): void
+    + withdraw(amount: Double): void
+    + viewBalance(): Double
+}
+
+class SavingsAccount {
+    - interestRate: Double
+    + calculateInterest(): void
+}
+
+class CurrentAccount {
+    - overdraftLimit: Double
+    + applyOverdraft(withdrawalAmount: Double): boolean
+}
+
+' Define relationships
+Bank "1" --> "many" Account : manages
+Account <|-- SavingsAccount
+Account <|-- CurrentAccount
+@enduml
