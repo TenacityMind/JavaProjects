@@ -71,3 +71,31 @@ Location: diagrams/BAM_ClassDiagram.puml
 To render the diagram:
 Use a PlantUML-supported tool (e.g., IntelliJ, Visual Studio Code, or PlantUML Online).
 Execute the .puml file to generate the diagram.
+
+### 3.Sequence Diagram
+The Sequence Diagram illustrates the dynamic flow of interactions between the user and the system. It helps visualize how different objects collaborate to perform various banking operations.
+
+Scenarios Represented
+The following sequence diagrams are included:
+
+**Account Creation**
+The user provides account details.
+The Bank class generates a unique account number and creates an instance of either SavingsAccount or CurrentAccount.
+The system stores the new account.
+**Deposit Money**
+The user provides an account number and a deposit amount.
+The Bank retrieves the corresponding Account and updates the balance.
+The updated balance or confirmation is returned to the user.
+**Withdraw Money**
+The user requests a withdrawal.
+The system checks if the balance is sufficient or if the CurrentAccount overdraft can be used.
+The withdrawal is either processed successfully or denied.
+**View Balance**
+The user requests their balance.
+The Bank retrieves and returns the account balance.
+
+Diagram Files
+Generated Image:
+The exported sequence diagram image is available for quick reference.
+File Name: BAM_SequenceDiagram.png
+Location: BankAccountManagement/Diagrams/SequenceDiagram.png
